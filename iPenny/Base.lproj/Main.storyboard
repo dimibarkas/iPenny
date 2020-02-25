@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIK-D4-aIF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iPenny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPenny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-pD-Ou3">
+                                <rect key="frame" x="107" y="188" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3GS-IH-upm"/>
+                                    <constraint firstAttribute="width" constant="200" id="ZVa-gr-Paz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFo-oC-sxW">
+                                <rect key="frame" x="67" y="462" width="280" height="100"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7NK-eG-T3f"/>
+                                    <constraint firstAttribute="width" constant="280" id="TML-Od-3EP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" red="0.18557661802030456" green="0.18557661802030456" blue="0.18557661802030456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Geld zählen"/>
+                                <connections>
+                                    <segue destination="xHQ-qO-wS2" kind="show" id="eKL-Qy-LUW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE1-fY-mEw">
+                                <rect key="frame" x="67" y="582" width="280" height="100"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="0hL-k5-Wnw"/>
+                                    <constraint firstAttribute="height" constant="100" id="CAe-bi-pd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" red="0.22180361675126903" green="0.22180361675126903" blue="0.22180361675126903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Rückgeld prüfen"/>
+                                <connections>
+                                    <action selector="onCheckChangeMoneyClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8pF-7y-Tn5"/>
+                                    <segue destination="DHl-qP-vrA" kind="show" identifier="rueckgeldPruefen" id="UX9-WY-9uE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keine Verbindung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Z-On-ASC">
+                                <rect key="frame" x="140.5" y="845" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-LO-VuX">
+                                <rect key="frame" x="147" y="762" width="120" height="48"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Jh9-dB-JS0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.21044178299492389" green="0.19585307595563969" blue="0.1520869548377872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Hilfe"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fAG-T3-oNR">
+                                <rect key="frame" x="90.5" y="846" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xoW-LO-VuX" firstAttribute="top" secondItem="DE1-fY-mEw" secondAttribute="bottom" constant="80" id="6pj-hI-Tak"/>
+                            <constraint firstItem="O8Z-On-ASC" firstAttribute="top" secondItem="xoW-LO-VuX" secondAttribute="bottom" constant="35" id="AVc-eW-iYX"/>
+                            <constraint firstItem="DE1-fY-mEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bn2-h4-Ltq"/>
+                            <constraint firstAttribute="bottom" secondItem="O8Z-On-ASC" secondAttribute="bottom" constant="30" id="L1l-m3-5Z9"/>
+                            <constraint firstItem="lcG-pD-Ou3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOh-ZO-JSk"/>
+                            <constraint firstItem="lcG-pD-Ou3" firstAttribute="top" secondItem="wIa-UY-5kE" secondAttribute="top" constant="100" id="XIs-tm-970"/>
+                            <constraint firstItem="RFo-oC-sxW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YiA-dY-3XI"/>
+                            <constraint firstItem="DE1-fY-mEw" firstAttribute="top" secondItem="RFo-oC-sxW" secondAttribute="bottom" constant="20" id="bTJ-B6-TYw"/>
+                            <constraint firstAttribute="bottom" secondItem="fAG-T3-oNR" secondAttribute="bottom" constant="30" id="fL0-MI-RzC"/>
+                            <constraint firstItem="xoW-LO-VuX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ikG-bo-0iw"/>
+                            <constraint firstItem="O8Z-On-ASC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oUM-jy-Lry"/>
+                            <constraint firstItem="O8Z-On-ASC" firstAttribute="leading" secondItem="fAG-T3-oNR" secondAttribute="trailing" constant="30" id="soR-3E-j2y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wIa-UY-5kE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zUd-2U-TXG" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="changeMoneyButton" destination="DE1-fY-mEw" id="GDQ-QK-Qsd"/>
+                        <outlet property="connectionLabel" destination="O8Z-On-ASC" id="cj9-Pn-UxW"/>
+                        <outlet property="countMoneyButton" destination="RFo-oC-sxW" id="riR-Ck-Jki"/>
+                        <outlet property="helpButton" destination="xoW-LO-VuX" id="rjZ-ip-fEM"/>
+                        <outlet property="iPennyLabel" destination="lcG-pD-Ou3" id="2SL-ny-nPD"/>
+                        <outlet property="myActivIndi" destination="fAG-T3-oNR" id="5zy-QN-Yze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Count Change View Controller-->
+        <scene sceneID="teS-ju-zHB">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="DHl-qP-vrA" customClass="CountChangeViewController" customModule="iPenny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tm7-xG-bmi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPenny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNf-7M-6i2">
+                                <rect key="frame" x="107" y="188" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="J7s-JD-XlL"/>
+                                    <constraint firstAttribute="width" constant="200" id="YKY-ci-TXF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rückgeld prüfen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-O2-Xsy">
+                                <rect key="frame" x="102" y="293" width="210" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00 €" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-q0-KZx">
+                                <rect key="frame" x="82" y="509" width="250" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="0.59682684075342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.19194183470000001" green="0.17930093229999999" blue="0.14137822520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="blI-HH-V1s"/>
+                                    <constraint firstAttribute="height" constant="120" id="gp5-Ai-hMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dir fehlen: 2,00 €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-G1-JDg">
+                                <rect key="frame" x="55" y="779" width="304" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="coF-dN-qhl" firstAttribute="bottom" secondItem="LSb-G1-JDg" secondAttribute="bottom" constant="35" id="49c-wo-bF8"/>
+                            <constraint firstItem="uNf-7M-6i2" firstAttribute="top" secondItem="coF-dN-qhl" secondAttribute="top" constant="100" id="ArW-kQ-jOR"/>
+                            <constraint firstItem="LSb-G1-JDg" firstAttribute="top" secondItem="zlA-q0-KZx" secondAttribute="bottom" constant="150" id="EVb-bC-zcq"/>
+                            <constraint firstItem="LSb-G1-JDg" firstAttribute="centerX" secondItem="Tm7-xG-bmi" secondAttribute="centerX" id="Tg7-N6-7wT"/>
+                            <constraint firstItem="iIc-O2-Xsy" firstAttribute="top" secondItem="uNf-7M-6i2" secondAttribute="bottom" constant="25" id="dEj-yY-3P3"/>
+                            <constraint firstItem="uNf-7M-6i2" firstAttribute="centerX" secondItem="Tm7-xG-bmi" secondAttribute="centerX" id="fOH-Ju-G4S"/>
+                            <constraint firstItem="zlA-q0-KZx" firstAttribute="centerX" secondItem="Tm7-xG-bmi" secondAttribute="centerX" id="iFR-OO-rAE"/>
+                            <constraint firstItem="iIc-O2-Xsy" firstAttribute="centerX" secondItem="Tm7-xG-bmi" secondAttribute="centerX" id="qmi-V0-Ghd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="coF-dN-qhl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5nV-Iz-Oks"/>
+                    <connections>
+                        <outlet property="changeCounter" destination="zlA-q0-KZx" id="vlo-WC-ROK"/>
+                        <outlet property="changeLabel" destination="LSb-G1-JDg" id="Mbm-rd-anO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAI-12-iSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="550"/>
+        </scene>
+        <!--Count Money View Controller-->
+        <scene sceneID="Fxh-AV-EX9">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="xHQ-qO-wS2" customClass="CountMoneyViewController" customModule="iPenny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YEL-aM-VNh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPenny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4R-82-QsS">
+                                <rect key="frame" x="107" y="188" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hza-3s-EDe"/>
+                                    <constraint firstAttribute="height" constant="80" id="Whd-dz-NFQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 €" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9S-9n-si7">
+                                <rect key="frame" x="82" y="482" width="250" height="120"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59685359589041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.19194183467715742" green="0.17930093229981184" blue="0.1413782251677751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Fc0-KZ-ZCf"/>
+                                    <constraint firstAttribute="height" constant="120" id="c20-p4-NkX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CF-Sn-yal">
+                                <rect key="frame" x="107" y="752" width="200" height="70"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3S5-GA-txK"/>
+                                    <constraint firstAttribute="width" constant="200" id="Hg4-QK-fEK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.26278970904263965" green="0.24548290845189596" blue="0.19356250667966485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Zurücksetzen"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="xHQ-qO-wS2" eventType="touchUpInside" id="ejt-v8-5Jq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geld zählen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3w-Xb-6gR">
+                                <rect key="frame" x="131" y="293" width="152.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b4R-82-QsS" firstAttribute="centerX" secondItem="YEL-aM-VNh" secondAttribute="centerX" id="2dT-MU-QrF"/>
+                            <constraint firstItem="8CF-Sn-yal" firstAttribute="top" secondItem="g9S-9n-si7" secondAttribute="bottom" constant="150" id="9KS-Xn-Eg8"/>
+                            <constraint firstItem="o3w-Xb-6gR" firstAttribute="top" secondItem="b4R-82-QsS" secondAttribute="bottom" constant="25" id="PiU-w0-AT5"/>
+                            <constraint firstItem="X9Q-n7-XVY" firstAttribute="bottom" secondItem="8CF-Sn-yal" secondAttribute="bottom" constant="40" id="T7B-U2-Y4z"/>
+                            <constraint firstItem="o3w-Xb-6gR" firstAttribute="centerX" secondItem="YEL-aM-VNh" secondAttribute="centerX" id="goy-HS-KjB"/>
+                            <constraint firstItem="b4R-82-QsS" firstAttribute="top" secondItem="X9Q-n7-XVY" secondAttribute="top" constant="100" id="jmb-jA-Zs7"/>
+                            <constraint firstItem="g9S-9n-si7" firstAttribute="centerX" secondItem="YEL-aM-VNh" secondAttribute="centerX" id="kWW-o4-cq1"/>
+                            <constraint firstItem="8CF-Sn-yal" firstAttribute="centerX" secondItem="YEL-aM-VNh" secondAttribute="centerX" id="q16-Xx-bYE"/>
+                            <constraint firstItem="g9S-9n-si7" firstAttribute="centerX" secondItem="YEL-aM-VNh" secondAttribute="centerX" id="ywp-aI-kZh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X9Q-n7-XVY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YR8-O7-AUw"/>
+                    <connections>
+                        <outlet property="label" destination="g9S-9n-si7" id="BUA-jd-6XX"/>
+                        <outlet property="resetButton" destination="8CF-Sn-yal" id="IdW-Vc-t1a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2C-EP-TqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079.7101449275365" y="-120.53571428571428"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="hKe-OM-Mwh">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIK-D4-aIF" customClass="MainNavigationController" customModule="iPenny" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="psa-nH-tcF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1SL-vN-LA3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnC-T4-S9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e1q-QB-LM1">
+                    <rect key="frame" x="0.0" y="0.0" width="176" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="Zurücksetzen"/>
+                    <connections>
+                        <action selector="resetButton:" destination="xHQ-qO-wS2" eventType="touchUpInside" id="JRq-WF-Sul"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
